@@ -1,8 +1,181 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+.max-width {
+  max-width: 1400px;
+  margin: auto;
+}
+
 *, ::before, ::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "roboto", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: #000000;
+}
+
+h2 {
+  color: #5E96B7;
+}
+
+.max-width {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-left: 5%;
+  border-top: 2px solid #EFEFEF;
+  border-bottom: 2px solid #EFEFEF;
+}
+.header .logo {
+  width: 300px;
+  fill: #EFEFEF;
+}
+.header .navigation .nav-list {
+  display: flex;
+  gap: 15px;
+}
+.header .navigation .nav-list .nav-item a {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #EFEFEF;
+  text-transform: uppercase;
+  transition: color 0.2s ease-in;
+}
+.header .navigation .nav-list .nav-item a:hover {
+  color: #5E96B7;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+}
+
+.aside {
+  height: 89vh;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  padding-top: 50px;
+  border: 2px solid #EFEFEF;
+}
+.aside .aside-icone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  color: #EFEFEF;
+}
+.aside .aside-icone svg {
+  width: 50px;
+  fill: #EFEFEF;
+}
+.aside .aside-icone svg:hover {
+  fill: #5E96B7;
+}
+.aside .aside-icone span {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.main-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.main-section .about {
+  width: 90%;
+  height: 165px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px 15px;
+  margin-top: 50px;
+  color: #EFEFEF;
+  border: 2px solid #EFEFEF;
+  background-image: url("../assets/Light_Kit_For_Imperial_Star_Destroyer_75252_800x.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main-section .about h2 {
+  color: #5E96B7;
+}
+.main-section .about .span-blue {
+  color: #5E96B7;
+}
+.main-section .about #about-btn {
+  width: 10%;
+  padding: 15px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  color: #EFEFEF;
+  cursor: pointer;
+  border: 2px solid #EFEFEF;
+  background-color: #000000;
+  transition: scale 0.5s ease;
+}
+.main-section .about #about-btn:hover {
+  scale: 0.9;
+}
+.main-section .kpi {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 30px 15px;
+  margin-top: 20vh;
+  background-image: url("../assets/aldebaran-s-uXchDIKs4qI-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #EFEFEF;
+  border: 2px solid #EFEFEF;
+}
+.main-section .kpi .kpi-container {
+  display: flex;
+  gap: 15px;
+  margin-top: 50px;
+}
+.main-section .kpi .kpi-container .kpi-icone {
+  display: flex;
+  gap: 15px;
+}
+.main-section .kpi .kpi-container .kpi-icone svg {
+  width: 60px;
+  fill: #5E96B7;
+}
+.main-section .kpi .kpi-container .kpi-icone .kpi-infos h3 {
+  font-size: 1rem;
+  color: #5E96B7;
+}
+.main-section .kpi #kpi-btn {
+  width: 25%;
+  padding: 15px;
+  font-weight: 500;
+  align-self: flex-end;
+  text-transform: uppercase;
+  margin-top: 20px;
+  color: #EFEFEF;
+  cursor: pointer;
+  border: 2px solid #EFEFEF;
+  background-color: #000000;
+  transition: scale 0.5s ease;
+}
+.main-section .kpi #kpi-btn:hover {
+  scale: 0.9;
+}
+
+.max-width {
+  max-width: 1400px;
+  margin: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

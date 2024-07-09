@@ -1,0 +1,177 @@
+@import"variables";
+// Header
+.header{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    gap: $gap;
+    padding-left: 5%;
+    border-top:  2px solid $primary;
+    border-bottom: 2px solid $primary;
+    .logo{
+        width: 300px;
+        fill: $primary;
+    }
+    .navigation{
+        .nav-list{
+            display: flex;
+            gap: $gap;
+            .nav-item{
+                a{
+                    font-weight: 600;
+                    font-size: 1.2rem;
+                    color: $primary;
+                    text-transform: uppercase;
+
+                    transition: color .2s ease-in;
+                }
+                a:hover{
+                    color: $blue;
+                }
+            }
+        }
+    }
+}
+
+
+// Main 
+main{
+    display: grid;
+    grid-template-columns: 130px 1fr;
+}
+
+// Aside
+.aside{
+    height: 89vh;
+    display: flex;
+    flex-direction: column;
+
+    gap: $gap *3;
+    padding-top: 50px;
+
+    border: 2px solid $primary;
+    .aside-icone{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: $gap;
+        color: $primary;
+        svg{
+            width: 50px;
+            fill: $primary;
+        }
+        svg:hover{
+            fill: $blue;
+        }
+        span{
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+// Main-section
+.main-section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    // justify-content: space-between;
+    // Section about
+    .about{
+        width: 90%;
+        height: 165px;
+        display: flex;
+        flex-direction: column;
+        gap: $gap;
+
+        padding: 20px 15px;
+        margin-top: 50px;
+
+
+        color: $primary;
+        border: 2px solid $primary;
+        background-image: url("../assets/Light_Kit_For_Imperial_Star_Destroyer_75252_800x.webp");
+        background-size: cover;
+        background-repeat: no-repeat;
+        h2{
+            color: $blue;
+        }
+        .span-blue{
+            color: $blue;
+        }
+        #about-btn{
+            width: 10%;
+            padding: 15px;
+            font-weight: 500;
+            text-align: center;
+            text-transform: uppercase;
+
+            color: $primary;
+            cursor: pointer;
+            border: 2px solid $primary;
+            background-color: $secondary;
+            transition: scale .5s ease;
+        }
+        #about-btn:hover{
+            scale: (0.9);
+        }
+    }
+    // Section KPI
+    .kpi{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+
+        gap: $gap;
+        padding: 30px 15px;
+        margin-top: 20vh;
+        background-image: url("../assets/aldebaran-s-uXchDIKs4qI-unsplash.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: $primary;
+        border: 2px solid $primary;
+
+        .kpi-container{
+            display: flex;
+            gap: $gap;
+            margin-top: 50px;
+
+            .kpi-icone{
+                display: flex;
+                gap: $gap;
+                svg{
+                    width: 60px;
+                    fill: $blue;
+                }
+                .kpi-infos{
+                    h3{
+                        font-size: 1rem;
+                        color: $blue;
+                    }
+                }
+                
+            }
+            
+        }
+        #kpi-btn{
+            width: 25%;
+            padding: 15px;
+            font-weight: 500;
+            align-self: flex-end;
+            text-transform: uppercase;
+
+            margin-top: 20px;
+
+            color: $primary;
+            cursor: pointer;
+            border: 2px solid $primary;
+            background-color: $secondary;
+            transition: scale .5s ease;
+        }
+        #kpi-btn:hover{
+            scale: (0.9);
+        }
+    }
+}
