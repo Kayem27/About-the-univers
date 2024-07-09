@@ -26,11 +26,18 @@ function getVehicules(){
     
 }
 
-// Affichage dynamique des valeurs 
+// Affichage dynamique les counts 
 const nbrPeople = document.querySelector("#nbr-vivants");
 const nbrVehicule = document.querySelector("#nbr-vehicules");
 const nbrPlanete = document.querySelector("#nbr-planetes");
 
-getPeople();
-getPanete();
-getVehicules();
+document.addEventListener('DOMContentLoaded', async () =>{
+    const People = await getPeople();
+    const vehicules = await getVehicules();
+    const planetes = await getPanete();
+
+    nbrPeople.textContent = People.count;
+    nbrVehicule.textContent = vehicules.count;
+    nbrPlanete.textContent = planetes.count;
+})
+
