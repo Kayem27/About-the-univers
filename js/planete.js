@@ -1,10 +1,10 @@
-import { getPanete, getFetch } from "./fetch.js";
+import { getFetch } from "./fetch.js";
 
 const tbody = document.querySelector('#tbody');
 const spanNbrPlanete = document.querySelector('.span-nbr-plante');
 
 document.addEventListener('DOMContentLoaded', async () => {
-    const planetesName = await getPanete("https://swapi.dev/api/planets/");
+    const planetesName = await getFetch("https://swapi.dev/api/planets/");
     let links = [];
     let nbrPages = 0;
 
