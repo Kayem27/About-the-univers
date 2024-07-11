@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Afficher toutes les planètes
     document.querySelector('#voir-plus').addEventListener('click', async (e) =>  {
-        for (let i = 0; i <= nbrPages; i++) {
+        for (let i = 0; i <= nbrPages -1; i++) {
             let req = await getFetch(links[i]);
             console.log(links[i]);
             await displayPlanet(req);
@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         let allPlanete = resName.results;
         Object.values(allPlanete).forEach(onePlanete => {
             const tr = `<tr>
-                                    <td dataName = "${onePlanete.name}" dataPopulation="${onePlanete.population}" dataDiametre="${onePlanete.diameter}" dataGravity=" ${onePlanete.gravity}" dataTerrain="${onePlanete.terrain}" dataClimat="${onePlanete.climat}">${onePlanete.name}</td>
-                                    <td dataName = "${onePlanete.name}" dataPopulation="${onePlanete.population}" dataDiametre="${onePlanete.diameter}" dataGravity=" ${onePlanete.gravity}" dataTerrain="${onePlanete.terrain}" dataClimat="${onePlanete.climat}" >${onePlanete.terrain}</td>
+                                    <td dataName = "${onePlanete.name}" dataPopulation="${onePlanete.population}" dataDiametre="${onePlanete.diameter}" dataGravity=" ${onePlanete.gravity}" dataTerrain="${onePlanete.terrain}" dataClimat="${onePlanete.climate}">${onePlanete.name}</td>
+                                    <td dataName = "${onePlanete.name}" dataPopulation="${onePlanete.population}" dataDiametre="${onePlanete.diameter}" dataGravity=" ${onePlanete.gravity}" dataTerrain="${onePlanete.terrain}" dataClimat="${onePlanete.climate}" >${onePlanete.terrain}</td>
                                 </tr> `
             tbody.innerHTML += tr;
     
