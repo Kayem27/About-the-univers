@@ -1,0 +1,45 @@
+.details{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    visibility: hidden;
+
+    h2{
+        text-transform: uppercase;
+    }
+    p{
+        color: $primary;
+        span{
+            color: $blue;
+        }
+    }
+    .kpi-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 15px;
+        .kpi-icone{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            svg{
+                width: 30px;
+                fill: $blue;
+            }
+            .kpi-infos{
+                color: $primary;
+            }
+        }
+    }
+    #savoir-plus{
+        padding: 10px;
+        
+        border: 1px solid $primary;
+        background-color: $secondary;
+        color: $primary;
+        cursor: pointer;
+    }
+    #savoir-plus:hover{
+        background-color: $blue;
+    }
+}

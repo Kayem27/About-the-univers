@@ -188,4 +188,131 @@ main {
   background-color: #5E96B7;
 }
 
+.max-width {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.bg-blue {
+  background-color: #5E96B7;
+}
+
+.table {
+  border-collapse: collapse;
+}
+.table thead {
+  background-color: #5E96B7;
+  color: #EFEFEF;
+}
+.table th, .table td {
+  padding: 15px;
+  border-bottom: 1px solid #EFEFEF;
+}
+.table tbody tr {
+  color: #EFEFEF;
+  cursor: pointer;
+}
+.table tbody tr:hover {
+  background-color: rgba(168, 167, 167, 0.753);
+}
+
+.section-planete {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+.section-planete .planete-card {
+  padding: 20px;
+  border: 1px solid #EFEFEF;
+}
+.section-planete .planete-card h2 {
+  text-transform: uppercase;
+  color: #EFEFEF;
+}
+.section-planete .planete-card .planete-filter-container {
+  max-height: 490px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+  overflow-y: scroll;
+}
+.section-planete .planete-card .planete-filter-container #planete-filter {
+  width: 50%;
+  padding: 5px;
+  color: #EFEFEF;
+  background-color: #000000;
+}
+.section-planete .planete-card .search-container {
+  display: flex;
+}
+.section-planete .planete-card .search-container input {
+  width: 100%;
+  padding: 7px;
+  border: 1px solid #EFEFEF;
+  color: #EFEFEF;
+  background-color: #000000;
+}
+.section-planete .planete-card .search-container svg {
+  width: 15px;
+  fill: #EFEFEF;
+  position: relative;
+  right: 20px;
+}
+.section-planete .planete-card #voir-plus {
+  padding: 10px;
+  border: 1px solid #EFEFEF;
+  background-color: #000000;
+  color: #EFEFEF;
+  cursor: pointer;
+}
+.section-planete .planete-card #voir-plus:hover {
+  background-color: #5E96B7;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  visibility: hidden;
+}
+.details h2 {
+  text-transform: uppercase;
+}
+.details p {
+  color: #EFEFEF;
+}
+.details p span {
+  color: #5E96B7;
+}
+.details .kpi-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px;
+}
+.details .kpi-container .kpi-icone {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.details .kpi-container .kpi-icone svg {
+  width: 30px;
+  fill: #5E96B7;
+}
+.details .kpi-container .kpi-icone .kpi-infos {
+  color: #EFEFEF;
+}
+.details #savoir-plus {
+  padding: 10px;
+  border: 1px solid #EFEFEF;
+  background-color: #000000;
+  color: #EFEFEF;
+  cursor: pointer;
+}
+.details #savoir-plus:hover {
+  background-color: #5E96B7;
+}
+
 /*# sourceMappingURL=style.css.map */

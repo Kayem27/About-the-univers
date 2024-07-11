@@ -1,0 +1,62 @@
+.section-planete{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    padding: 20px;
+    .planete-card{
+        padding: 20px;
+        border: 1px solid $primary;
+        h2{
+            text-transform: uppercase;
+            color: $primary;
+        }
+        .planete-filter-container{
+            max-height: 490px;
+            
+            display: flex;
+            flex-direction: column;
+            gap: $gap;
+            margin-top: 15px;
+            
+            overflow-y: scroll;
+
+            #planete-filter{
+                width: 50%;
+                padding: 5px;
+
+                color: $primary;
+                background-color: $secondary;
+            }
+        }
+        .search-container{
+            display: flex;
+            // width: 100%;
+            input{
+                width: 100%;
+                padding: 7px;
+                border: 1px solid $primary;
+                color: $primary;
+                background-color: $secondary;
+            }
+            svg{
+                width: 15px;
+                fill: $primary;
+                position: relative;
+                right: 20px;
+
+            }
+        }
+        #voir-plus{
+            padding: 10px;
+            
+            border: 1px solid $primary;
+            background-color: $secondary;
+            color: $primary;
+            cursor: pointer;
+        }
+        #voir-plus:hover{
+            background-color: $blue;
+        }
+    }
+}
