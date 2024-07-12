@@ -197,6 +197,11 @@ main {
   background-color: #5E96B7;
 }
 
+.table-container {
+  height: 50vh;
+  overflow-y: scroll;
+}
+
 .table {
   border-collapse: collapse;
 }
@@ -231,12 +236,10 @@ main {
   color: #EFEFEF;
 }
 .section-planete .planete-card .planete-filter-container {
-  max-height: 490px;
   display: flex;
   flex-direction: column;
   gap: 15px;
   margin-top: 15px;
-  overflow-y: scroll;
 }
 .section-planete .planete-card .planete-filter-container #planete-filter {
   width: 50%;

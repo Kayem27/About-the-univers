@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 break;
         }
         tbody.innerHTML = '';
-        displayElement({ results: filteredPlanets }, spanNbrPlanete, tbody);
+        displayElement({ results: filteredPlanets }, spanNbrPlanete, tbody, true);
         displayDetails();
     }
 

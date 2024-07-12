@@ -12,14 +12,14 @@
             color: $primary;
         }
         .planete-filter-container{
-            max-height: 490px;
+           
             
             display: flex;
             flex-direction: column;
             gap: $gap;
             margin-top: 15px;
             
-            overflow-y: scroll;
+           
 
             #planete-filter{
                 width: 50%;

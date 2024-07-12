@@ -1,6 +1,6 @@
 export function displayElement(resName, spanNbrPlanete, tbody, displaySpan = false) {
     if (displaySpan) {
-        spanNbrPlanete.innerText = `(${resName.count || resName.results.length})`;
+        spanNbrPlanete.innerText = `(${resName.results.length})`;
     }
 
     let allPlanete = resName.results;
@@ -37,8 +37,6 @@ export function displayDetails() {
             climat.textContent = dataClimat;
             gravite.textContent = dataGravity;
             terrain.textContent = dataTerrain;
-
-           
         });
     });
 }
