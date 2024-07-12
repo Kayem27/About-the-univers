@@ -260,22 +260,11 @@ main {
   position: relative;
   right: 20px;
 }
-.section-planete .planete-card #voir-plus {
-  padding: 10px;
-  border: 1px solid #EFEFEF;
-  background-color: #000000;
-  color: #EFEFEF;
-  cursor: pointer;
-}
-.section-planete .planete-card #voir-plus:hover {
-  background-color: #5E96B7;
-}
 
 .details {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  visibility: hidden;
 }
 .details h2 {
   text-transform: uppercase;
@@ -285,6 +274,9 @@ main {
 }
 .details p span {
   color: #5E96B7;
+}
+.details #population {
+  color: #EFEFEF;
 }
 .details .kpi-container {
   display: grid;

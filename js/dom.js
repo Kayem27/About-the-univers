@@ -1,6 +1,6 @@
-export function displayPlanet(resName, spanNbrPlanete, tbody, displaySpan = false) {
+export function displayElement(resName, spanNbrPlanete, tbody, displaySpan = false) {
     if (displaySpan) {
-        spanNbrPlanete.innerText += `(${resName.count})`;
+        spanNbrPlanete.innerText = `(${resName.count || resName.results.length})`;
     }
 
     let allPlanete = resName.results;
@@ -38,7 +38,7 @@ export function displayDetails() {
             gravite.textContent = dataGravity;
             terrain.textContent = dataTerrain;
 
-            document.querySelector('.details').style.visibility = "visible";
+           
         });
     });
 }

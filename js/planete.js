@@ -1,30 +1,51 @@
 import { getFetch, getAllPages } from './fetch.js';
-import { displayPlanet, displayDetails } from './dom.js';
+import { displayElement, displayDetails } from './dom.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
     const tbody = document.querySelector('#tbody');
     const spanNbrPlanete = document.querySelector('.span-nbr-plante');
     const planeteFilter = document.querySelector('#planete-filter');
 
+    let allPlanets = [];
     const planetesName = await getFetch("https://swapi.dev/api/planets/");
     let links = await getAllPages();
 
-    displayPlanet(planetesName, spanNbrPlanete, tbody, true);
+    async function loadAllPlanets() {
+        allPlanets = [...planetesName.results];
+        for (let link of links) {
+            let req = await getFetch(link);
+            allPlanets = [...allPlanets, ...req.results];
+        }
+    }
+
+   
+    await loadAllPlanets();
+    displayElement({ results: allPlanets }, spanNbrPlanete, tbody, true);
     displayDetails();
 
-    function displayAllPlanets(){
-        document.querySelector('#voir-plus').addEventListener('click', async e => {
-            for (let link of links) {
-                let req = await getFetch(link);
-                await displayPlanet(req, spanNbrPlanete, tbody);
-            }
-            displayDetails();
-            e.target.style.display = "none";
-        });
+ 
+    function filterPlanets(populationRange) {
+        let filteredPlanets = [];
+        switch (populationRange) {
+            case "cent-mille":
+                filteredPlanets = allPlanets.filter(p => p.population !== "unknown" && +p.population <= 100000);
+                break;
+            case "cent-million":
+                filteredPlanets = allPlanets.filter(p => p.population !== "unknown" && +p.population > 100000 && +p.population <= 100000000);
+                break;
+            case "plus-cent-million":
+                filteredPlanets = allPlanets.filter(p => p.population !== "unknown" && +p.population > 100000000);
+                break;
+            default:
+                filteredPlanets = allPlanets;
+                break;
+        }
+        tbody.innerHTML = '';
+        displayElement({ results: filteredPlanets }, spanNbrPlanete, tbody);
+        displayDetails();
     }
-    displayAllPlanets();
 
-    planeteFilter.addEventListener('change', () => {
-        
+    planeteFilter.addEventListener('change', (e) => {
+        filterPlanets(e.target.value);
     });
 });
